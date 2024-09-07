@@ -1,4 +1,4 @@
-public class ContohOperator01{
+public class ContohOperator01 {
     public static void main(String[] args){
         int x = 10;
         System.out.println("x++ = " + x++);

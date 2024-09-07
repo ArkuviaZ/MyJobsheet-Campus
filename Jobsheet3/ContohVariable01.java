@@ -1,4 +1,4 @@
-public class ContohVariable01{
+public class ContohVariable01 {
     public static void main(String[] args){
         String salahSatuHobySayaAdalah = "Bermain Petak Umpet";
         boolean isPandai = true;

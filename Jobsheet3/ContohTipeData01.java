@@ -1,4 +1,4 @@
-public class ContohTipeData01{
+public class ContohTipeData01 {
     public static void main(String[] args){
         char golonganDarah = 'A';
         byte jarak = (byte) 130;
