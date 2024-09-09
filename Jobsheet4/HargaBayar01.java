@@ -11,11 +11,11 @@ public class HargaBayar01 {
         harga = input.nextInt();
         System.out.println("Masukkan Jumlah Barang Yang Dibeli: ");
         jumlah  = input.nextInt();
-        /eksekusi
+        //eksekusi
         total = harga*jumlah;
         jmlDis = total*dis;
         bayar = total-jmlDis;
-        /output
+        //output
         System.out.println("Diskon yang anda dapatkan adalah " + jmlDis);
         System.out.println("Jumlah yang harus dibayar adalah " + bayar);
     }

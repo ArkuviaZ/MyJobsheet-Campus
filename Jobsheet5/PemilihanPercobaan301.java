@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PemilihanPercobaan101 {
+public class PemilihanPercobaan301 {
     public static void main(String[] args) {
         //deklarasi
         double angka1, angka2, hasil;
