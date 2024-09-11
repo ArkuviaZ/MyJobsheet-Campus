@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-import javax.xml.crypto.Data;
 
 public class ArrayDua01 {
     public static void main(String[] args) {

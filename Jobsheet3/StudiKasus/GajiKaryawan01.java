@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Tugas2Jobsheet3Absen01 {
+public class GajiKaryawan01 {
     public static void main(String[] args) {
         //deklarasi
         Scanner sc = new Scanner(System.in);
@@ -11,12 +11,16 @@ public class Tugas2Jobsheet3Absen01 {
         System.out.print("Masukkan upah per jam: ");
         UpahJam = sc.nextInt();
         //eksekusi
-        double gajiBulanan = jmlJamKerja*UpahJam;
-        double totalBonus = gajiBulanan*bonus;
+        double gajiBulanan = jmlJamKerja * UpahJam;
+        double gajiBersih = gajiBulanan;
+        double totalBonus = gajiBulanan * bonus;
         gajiBulanan += totalBonus;
-        double totalPajak = gajiBulanan*pajak;
+        double totalPajak = gajiBulanan * pajak;
         gajiBulanan -= totalPajak;
         //output
-        System.out.print("Total gaji karyawan setelah mendapatkan bonus dan dikurangi pajak: "+gajiBulanan);
+        System.out.println("Total Gaji: " + gajiBulanan);
+        System.out.println("Total Bonus: " + totalBonus);
+        System.out.println("Total Pajak: " + totalPajak);
+        System.out.println("Total Gaji Bersih: " + gajiBersih);
     }
 }
