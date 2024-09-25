@@ -1,4 +1,3 @@
-
 import java.util.Scanner; //import buat menggunakan scanner input
 
 public class Kalori01{
