@@ -12,13 +12,10 @@ public class Tugas2Kafe01{
         int sum = 0;
 
         for (int i=1; i<=n; i++) {
-
             System.out.print("Masukkan nama makanan/minuman: ");
             arrNama[i] = in.next();
-            
             System.out.print("Masukkan harga makanan/minuman: ");
             arrHarga[i] = in.nextInt();
-
             sum += arrHarga[i];
         }
 
