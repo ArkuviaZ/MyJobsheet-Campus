@@ -19,7 +19,7 @@ public class ArrayDua01 {
                         System.out.print("Masukkan suhu: ");
                         data[i][j] = scan.nextInt();
                         break;
-                        if(min[j] > data[i][j]){
+                        if(min[j] >= data[i][j]){
                             min[j]=data[i][j];
                         }
                     case 1:
