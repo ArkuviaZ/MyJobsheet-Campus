@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+public class Cafe0201 {
+    // Data Penjualan
+    static int[][] penjualan;
+
+    // Daftar Menu
+    static String[] menu;
+
+    // Fungsi untuk menambahkan data penjualan
+    public static void inputJual(int menuI, int hariI, int nilai) {
+        penjualan[menuI][hariI] = nilai;
+    }
+
+    // Fungsi untuk menampilkan seluruh data penjualan
+    public static void DataPenjualan() {
+        System.out.printf("%-12s", "Menu");
+        for (int i = 1; i <= penjualan[0].length; i++) {
+            System.out.printf("Hari %d\t", i);
+        }
+        System.out.println();
+        for (int i = 0; i < penjualan.length; i++) {
+            System.out.printf("%-12s", menu[i]);
+            for (int j = 0; j < penjualan[i].length; j++) {
+                System.out.printf("%d\t\t", penjualan[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    // Fungsi untuk menampilkan menu dengan penjualan tertinggi
+    public static void tertinggi() {
+        int mak = 0;
+        String top = "";
+        for (int i = 0; i < penjualan.length; i++) {
+            int total = 0;
+            for (int j = 0; j < penjualan[i].length; j++) {
+                total += penjualan[i][j];
+            }
+            if (total > mak) {
+                mak = total;
+                top = menu[i];
+            }
+        }
+        System.out.println("Menu dengan penjualan tertinggi adalah " + top + " dengan total penjualan " + mak);
+    }
+
+    // Fungsi untuk menampilkan rata-rata penjualan untuk setiap menu
+    public static void rata2Penjualan() {
+        System.out.println("Rata-rata penjualan untuk setiap menu:");
+        for (int i = 0; i < penjualan.length; i++) {
+            int total = 0;
+            for (int j = 0; j < penjualan[i].length; j++) {
+                total += penjualan[i][j];
+            }
+            double average = (double) total / penjualan[i].length;
+            System.out.printf("%s: %.2f\n", menu[i], average);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Anda ingin memasukkan berapa menu?: ");
+        int menuCount = scanner.nextInt();
+        System.out.print("Anda ingin memasukkan berapa hari?: ");
+        int hariCount = scanner.nextInt();
+
+        // Inisialisasi array
+        menu = new String[menuCount];
+        penjualan = new int[menuCount][hariCount];
+
+        scanner.nextLine(); // Membersihkan buffer
+        for (int i = 0; i < menuCount; i++) {
+            System.out.print("Masukkan nama menu ke-" + (i + 1) + ": ");
+            menu[i] = scanner.nextLine();
+        }
+
+        String lanjut;
+        do {
+            System.out.print("Anda ingin memasukkan nilai menu ke-?: ");
+            int menuI = scanner.nextInt();
+            System.out.print("Anda ingin memasukkan nilai hari ke-?: ");
+            int hariI = scanner.nextInt();
+            System.out.print("Berapa nilai yang ingin anda masukkan?: ");
+            int nilai = scanner.nextInt();
+
+            // Validasi indeks
+            if (menuI >= 0 && menuI < menuCount && hariI >= 0 && hariI < hariCount) {
+                inputJual(menuI, hariI, nilai);
+            } else {
+                System.out.println("Indeks menu atau hari tidak valid!");
+            }
+
+            System.out.print("Lanjut (y/t)?: ");
+            scanner.nextLine(); // Membersihkan buffer
+            lanjut = scanner.nextLine();
+        } while (lanjut.equalsIgnoreCase("y"));
+
+        DataPenjualan();
+        rata2Penjualan();
+        tertinggi();
+
+        scanner.close();
+    }
+}
