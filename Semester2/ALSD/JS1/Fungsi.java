@@ -39,7 +39,8 @@ public class Fungsi {
 
         System.out.println("Total Stok Bunga di Semua Cabang:");
         for (int i = 0; i < bunga.length; i++) {
-            System.out.println(bunga[i] + ": " + total[i]);
+            System.out.printf("%s: %d", bunga[i], total[i]);
+            System.out.println();
         }
     }
 }
