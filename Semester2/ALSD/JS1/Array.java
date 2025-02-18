@@ -15,7 +15,6 @@ public class Array {
             "Praktikum Dasar Pemrograman",
             "Keselamatan dan Kesehatan Kerja"
         };
-
         double nAngka[]= new double[matkul.length];
         double bNilai[]  = new double[matkul.length];
 
