@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class MahasiswaDemo01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan jumlah panjangnya: "); int n = sc.nextInt();
-        Mahasiswa01[] arrayOfMahasiswa = new Mahasiswa01[n];
+        Mahasiswa01[] arrayOfMahasiswa = new Mahasiswa01[3];
         String dummy;
 
-        for(int i=0; i < n; i++) {
+        for(int i=0; i < 3; i++) {
             arrayOfMahasiswa[i] = new Mahasiswa01();
         
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
