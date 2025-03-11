@@ -8,14 +8,14 @@ class Nilai{
         nilaiUAS = new int [n];
     }
 
-    public int nilaiUTSTertinggiDC(int arr[], int l, int r) {
+    public int nilaiUTSTertinggiDC(int nilaiUTS[], int l, int r) {
         if (l == r) {
-            return arr[l];
+            return nilaiUTS[l];
         }
 
         int mid = (l + r) / 2;
-        int maxLeft = nilaiUTSTertinggiDC(arr, l, mid);
-        int maxRight = nilaiUTSTertinggiDC(arr, mid + 1, r);
+        int maxLeft = nilaiUTSTertinggiDC(nilaiUTS, l, mid);
+        int maxRight = nilaiUTSTertinggiDC(nilaiUTS, mid + 1, r);
 
         return Math.max(maxLeft, maxRight);
     }
