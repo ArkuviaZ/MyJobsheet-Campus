@@ -13,6 +13,8 @@ public class DosenMain {
             System.out.println("3. Sorting usia secara Ascending (Bubble Sort)");
             System.out.println("4. Sorting usia secara Descending (Selection Sort)");
             System.out.println("5. Insertion Sort usia secara Descending");
+            System.out.println("6. Cari usai secara Sequential Searching");
+            System.out.println("7. Cari usai secara Binary Search");
             System.out.println("0. Keluar"); 
             System.out.print("Pilihan: "); pilihan = in.nextInt();
             in.nextLine();
@@ -43,6 +45,17 @@ public class DosenMain {
                     dtDosen.insertionSort();
                     System.out.printf("%nData dosen diurutkan Descending berdasarkan usia (Insertion Sort).%n%n");
                     break;
+                case 6:
+                    System.out.print("Masukkan usia yang akan dicari: "); int nSS = in.nextInt();
+                    int xSS = dtDosen.sequentialSearching(nSS);
+                    dtDosen.tampilDataSearch(nSS, xSS);
+                    break;
+                case 7:
+                    System.out.println("Masukkan usia yang akan dicari: "); int nBS = in.nextInt();
+                    dtDosen.SortingASC();
+                    int xBS = dtDosen.perantaraBS(nBS);
+                    dtDosen.tampilDataSearch(nBS, xBS);
+                    break;
                 case 0:
                     System.out.println("Program selesai, Anda telah keluar.");
                     break;
@@ -50,5 +63,9 @@ public class DosenMain {
                     System.out.println("Pilihan tidak valid.");
             }
         } while(pilihan != 0);
+    }
+
+    public void cari(){
+
     }
 }

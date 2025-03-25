@@ -37,7 +37,7 @@ public class DosenDemo01 {
             System.out.println("------------------------");
         }
 
-        DataDosen01 dataDosen = new DataDosen01(arrayDosen);
+        DataDosen01 dataDosen = new DataDosen01();
         dataDosen.dataSemuaDosen(arrayDosen);
         dataDosen.jumlahDosenPerJenisKelamin(arrayDosen);
         System.out.println("------------------------");

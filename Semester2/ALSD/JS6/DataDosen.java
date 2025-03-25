@@ -1,5 +1,5 @@
 public class DataDosen {
-    Dosen[] dataDosen = new Dosen[10];
+    public Dosen[] dataDosen = new Dosen[10];
     int idx = 0;
 
     public void tambah(Dosen dsn) {
@@ -53,6 +53,42 @@ public class DataDosen {
                 j--;
             }
             dataDosen[j+1] = temp;
+        }
+    }
+
+    public int sequentialSearching(double cari) {
+        for (int j = 0; j < idx; j++) {
+            if (dataDosen[j].usia == cari) {
+                return j;
+            }
+        }
+        return -1;
+    }
+
+    public int perantaraBS (int x){
+        return findBinarySearch(x, 0, idx - 1);
+    }
+
+    public int findBinarySearch(double cari, int left, int right){
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (dataDosen[mid].usia == cari) {
+                return mid;
+            }
+            if (dataDosen[mid].usia < cari) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+    void tampilDataSearch(int x, int pos) {
+        if (pos != -1) {
+            System.out.printf("%nDosen yang memiliki umur %d adalah %s %n%n", x, dataDosen[pos].nama);
+        } else {
+            System.out.println("Data dosen dengan usia " + x + " tidak ditemukan");
         }
     }
 }

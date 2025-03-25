@@ -4,11 +4,9 @@ public class Mahasiswa {
     String kelas;
     double ipk;
 
-    // Konstruktor default
     Mahasiswa() {
     }
 
-    // Konstruktor berparameter
     Mahasiswa(String nim, String nama, String kelas, double ipk) {
         this.nim = nim;
         this.nama = nama;
