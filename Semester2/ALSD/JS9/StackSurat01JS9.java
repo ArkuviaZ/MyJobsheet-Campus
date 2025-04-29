@@ -34,7 +34,7 @@ public class StackSurat01JS9 {
             surat[top] = srt;
         }
         else {
-            System.out.println("Stack penuh! Tidak bisa menambahkan tugas lagi. ");
+            System.out.println("Penuh! Tidak bisa menambahkan Surat lagi. ");
         }
     }
 
