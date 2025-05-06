@@ -29,4 +29,9 @@ public class Mahasiswa {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'tampilMahasiswa'");
     }
+
+    public void tampilkanData() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'tampilkanData'");
+    }
 }
