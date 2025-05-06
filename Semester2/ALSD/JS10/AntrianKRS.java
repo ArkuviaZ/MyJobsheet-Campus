@@ -106,6 +106,17 @@ public class AntrianKRS {
         return size;
     }
 
+    public void tambahAntrian(MahasiswaJS10 mhs) {
+        if (IsFull()) {
+            System.out.println("Antrian penuh, tidak dapat menambah mahasiswa.");
+            return;
+        }
+        rear = (rear + 1) % max;
+        data[rear] = mhs;
+        size++;
+        System.out.println(mhs.nama + " berhasil masuk ke antrian.");
+    }
+
     public MahasiswaJS10 layaniMahasiswa() {
         if (IsEmpty()) {
             System.out.println("Antrian kosong.");
