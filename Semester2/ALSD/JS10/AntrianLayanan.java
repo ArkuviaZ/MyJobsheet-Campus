@@ -64,6 +64,7 @@ public class AntrianLayanan {
     public void Enqueue(MahasiswaJS10 dt) {
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
+            return;
         } else {
             if (IsEmpty()) {
                 front = rear = 0;
@@ -83,6 +84,7 @@ public class AntrianLayanan {
         MahasiswaJS10 dt = null;
         if (IsEmpty()) {
             System.out.println("Queue masih kosong");
+            return null;
         } else {
             dt = data[front];
             size--;

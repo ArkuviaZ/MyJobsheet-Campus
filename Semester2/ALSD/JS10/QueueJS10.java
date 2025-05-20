@@ -84,7 +84,7 @@ public class QueueJS10 {
         int dt = 0;
         if (IsEmpty()) {
             System.out.println("Queue masih kosong");
-            System.exit(1);
+            return 0;
         } else {
             dt = data[front];
             size--;
