@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MahasiswaDemo01 {
     public static void main(String[] args) {
 
-        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01 ();
+        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01 (1);
         Scanner sc = new Scanner(System.in);
 
         int jumMhs = 5;
